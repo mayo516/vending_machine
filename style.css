@@ -1,0 +1,85 @@
+.container {
+    background-color: #EAE8FE;
+    ;
+    margin: 0 auto;
+    height: 100vh;
+    font-family: 'Noto Sans KR', sans-serif;
+
+}
+
+.logo {
+    text-align: center;
+}
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.buy-before {
+    background-color: aqua;
+    padding: 31px 27px 28px 27px;
+
+
+}
+
+
+
+
+.buy-after {
+
+    background-color: rgb(255, 0, 179);
+}
+
+.item-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin-bottom: 12px;
+
+
+
+}
+
+.purchasing-process {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.item-list li {
+    width: 94px;
+    height: 130px;
+
+    text-align: center;
+    margin: 0px auto 12px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 1px 8px;
+
+}
+
+.pro-name {
+    font-size: 9px;
+    color: #333333;
+    margin: 7px 0;
+
+
+}
+
+.price {
+    font-size: 12px;
+    background-color: #6327FE;
+    color: #fff;
+    border-radius: 20px;
+    width: 70px;
+    height: 22px;
+    margin: 0 auto;
+    line-height: 20px;
+}
+
+.product-wrapper {
+    padding: 11px;
+}
