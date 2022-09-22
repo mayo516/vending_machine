@@ -19,7 +19,7 @@
 }
 
 .buy-before {
-    background-color: aqua;
+    background-color: rgb(255, 255, 255);
     padding: 31px 27px 28px 27px;
 
 
@@ -36,7 +36,6 @@
 .item-list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
     margin-bottom: 12px;
 
 
@@ -45,8 +44,9 @@
 
 .purchasing-process {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 200fr 94fr;
+    grid-gap: 12px;
+    justify-items: flex-end
 }
 
 .item-list li {
@@ -58,7 +58,7 @@
     background-color: #fff;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 1px 8px;
-
+    cursor: pointer;
 }
 
 .pro-name {
@@ -82,4 +82,97 @@
 
 .product-wrapper {
     padding: 11px;
+}
+
+.purchasing-btn,
+.money-btn {
+    width: 94px;
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 500;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 1px 8px;
+    font-size: 13px;
+}
+
+.money-btn {
+    color: #000;
+    background-color: #fff;
+    height: 32px;
+}
+
+.purchasing-btn {
+    height: 106px;
+    background-color: #6327FE;
+    color: #fff;
+    font-weight: 700;
+}
+
+.balance {
+    background-color: #EAE8FE;
+    line-height: 30px;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 185px;
+    height: 33px;
+    padding-left: 15px;
+
+}
+
+.money-input {
+    width: 200px;
+    height: 33px;
+    padding: 0px;
+    box-sizing: border-box;
+    border: 1px solid #BDBDBD;
+    border-radius: 5px;
+    width: 200px;
+    height: 33px;
+    padding-left: 15px;
+    font-size: 13px;
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 500;
+}
+
+.shopping-bag {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    box-sizing: border-box;
+    border: 1px solid #BDBDBD;
+    border-radius: 5px;
+    background-color: #EAE8FE;
+    width: 200px;
+    height: 106px;
+    overflow: hidden;
+
+}
+
+.shopping-bag li {
+    width: 80%;
+    background-color: #fff;
+    height: 40%;
+    margin: 5px auto;
+    font-size: 9px;
+    border-radius: 5px;
+    text-align: center;
+    padding-bottom: 10px;
+
+}
+
+.shopping-bag li img {
+    position: relative;
+    top: 8px;
+    left: 15px;
+    height: 70%;
+
+}
+
+.order-num {
+    display: inline-block;
+    background-color: #fff;
+    border: 1px solid #BDBDBD;
+    border-radius: 5px;
+    padding: 5px 8px;
 }
