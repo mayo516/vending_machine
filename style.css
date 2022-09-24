@@ -226,7 +226,8 @@
 }
 
 .taken-item {
-    background-color: aquamarine;
+
+    background-color: #fff;
 }
 
 .money-num {
@@ -244,4 +245,72 @@
     display: inline;
 
 
+}
+
+.taken-item {
+    height: 481px;
+    text-align: center;
+}
+
+
+.buy-list {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    padding-top: 6px;
+    padding-right: 4px;
+    box-sizing: border-box;
+    border: 1px solid #BDBDBD;
+    border-radius: 5px;
+    background-color: #EAE8FE;
+    width: 306px;
+    height: 364px;
+    margin: 0 auto;
+}
+
+.buy-list {
+    display: inherit
+}
+
+.buy-item {
+    margin: 6px auto;
+    width: 276px;
+    height: 46px;
+    display: flex;
+    background-color: #fff;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+
+
+}
+
+.buy-item img {
+    height: 33px;
+    margin-left: 10px;
+}
+
+.buy-name {
+    position: relative;
+    right: 70px;
+}
+
+.buy-num {
+    position: relative;
+    right: 10px;
+}
+
+.buy-ber {
+    display: inline-block;
+    font-size: 14px;
+    margin: 25px 0px 13px 0px;
+    font-weight: 700;
+}
+
+.sum {
+    position: relative;
+    left: 115px;
+    display: inline-block;
+    font-size: 12px;
+    margin: 10px 0 26px 0;
 }
