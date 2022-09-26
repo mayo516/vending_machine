@@ -1,15 +1,16 @@
 body {
     background-color: #EAE8FE;
-    ;
+
 }
 
 .container {
     background-color: #EAE8FE;
     ;
     margin: 0 auto;
-    height: 100vh;
     font-family: 'Noto Sans KR', sans-serif;
     height: 100vh;
+    width: 100vw;
+
 
 }
 
@@ -20,14 +21,15 @@ body {
 .main {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 28px;
+    justify-content: space-around;
+    /* gap: 28px; */
+
 
 }
 
 .buy-before {
     background-color: rgb(255, 255, 255);
-    padding: 31px 27px 28px 27px;
+    padding: 31px 27px 0px 27px;
 
 
 }
@@ -207,6 +209,10 @@ body {
     padding: 7px 10px;
 }
 
+.buy-after {
+    width: 360px;
+}
+
 .money-have {
     background-color: #EAE8FE;
     border-radius: 5px;
@@ -322,9 +328,18 @@ body {
 
 
 @media screen and (max-width: 360px) {
+    .container {
+        margin: 0 auto;
+    }
+
     h1 img {
         width: 166px;
 
+
+    }
+
+    main {
+        width: 360px;
     }
 
 }
