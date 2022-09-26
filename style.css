@@ -55,27 +55,28 @@ body {
     justify-items: flex-end
 }
 
-.item-list li {
-    width: 94px;
-    height: 130px;
-
-    text-align: center;
-    margin: 0px auto 12px auto;
+.product-wrapper {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 1px 8px;
-    cursor: pointer;
+    width: 94px;
+    height: 130px;
+    margin-bottom: 12px;
+    font-size: 9px;
 }
 
+
 .pro-name {
+    display: inline-block;
     font-size: 9px;
     color: #333333;
-    margin: 7px 0;
+    margin: 6px 0;
 
 
 }
 
 .price {
+    display: inline-block;
     font-size: 12px;
     background-color: #6327FE;
     color: #fff;
@@ -374,6 +375,7 @@ body {
 
 @media screen and (max-width: 360px) {
     .container {
+
         margin: 0 auto;
     }
 
@@ -395,8 +397,6 @@ body {
     }
 
     .main {
-
-
         gap: 0;
 
 
