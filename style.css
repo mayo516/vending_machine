@@ -65,6 +65,18 @@ body {
     font-size: 9px;
 }
 
+.product-wrapper-click {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 1px 8px;
+    width: 94px;
+    height: 130px;
+    margin-bottom: 12px;
+    font-size: 9px;
+    border: 3px solid #6327FE;
+
+}
+
 
 .pro-name {
     display: inline-block;
