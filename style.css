@@ -128,13 +128,29 @@ body {
 }
 
 .balance {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
     background-color: #EAE8FE;
     line-height: 30px;
     border-radius: 5px;
     font-size: 14px;
-    width: 185px;
+    width: 180px;
     height: 33px;
-    padding-left: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+
+.balance-wapper {
+    display: inline-block;
+    text-align: right;
+}
+
+.balanceMoney {
+
+    display: inline-block;
+
 
 }
 

@@ -24,14 +24,14 @@
                 <ul class="item-list">
                     <li>
                         <button class="product-wrapper" id="originalCola">
-                            <img src="img/콜라.svg" alt="">
+                            <img src="img/originalCola.svg" alt="">
                             <span class="pro-name">Original_Cola</span>
                             <span class="price">1000원</span>
                         </button>
                     </li>
                     <li>
                         <button class="product-wrapper" id="violetCola">
-                            <img src="img/콜라.svg" alt="">
+                            <img src="img/violetCola.svg" alt="">
                             <span class="pro-name">Violet_Cola</span>
                             <span class="price">1000원</span>
 
@@ -39,7 +39,7 @@
                     </li>
                     <li>
                         <button class="product-wrapper" id="yellowCola">
-                            <img src="img/yellow_cola.svg" alt="">
+                            <img src="img/yellowCola.svg" alt="">
                             <span class="pro-name">Yellow_Cola</span>
                             <span class="price">1000원</span>
 
@@ -47,7 +47,7 @@
                     </li>
                     <li>
                         <button class="product-wrapper" id="coolCola">
-                            <img src="img/cool_cola.svg" alt="">
+                            <img src="img/coolCola.svg" alt="">
                             <span class="pro-name">Cool_Cola</span>
                             <span class="price">1000원</span>
 
@@ -55,7 +55,7 @@
                     </li>
                     <li>
                         <button class="product-wrapper" id="greenCola">
-                            <img src="img/green_cola.svg" alt="">
+                            <img src="img/greenCola.svg" alt="">
                             <span class="pro-name">Green_Cola</span>
                             <span class="price">1000원</span>
 
@@ -63,7 +63,7 @@
                     </li>
                     <li>
                         <button class="product-wrapper" id="orangeCola">
-                            <img src="img/orange_cola.svg" alt="">
+                            <img src="img/orangeCola.svg" alt="">
                             <span class="pro-name">Orange_Cola</span>
                             <span class="price">1000원</span>
 
@@ -71,8 +71,13 @@
                     </li>
                 </ul>
                 <div class="purchasing-process">
-                    <div class="balance">잔액:</div><button class="money-btn">거스름돈 반환</button>
-                    <input class="money-input" placeholder="입금액 입력" type="text"><button class="money-btn">입금</button>
+                    <div class="balance">잔액:
+                        <div class="balanceMoney" id="balanceMoney">1000000원</div>
+                    </div>
+
+                    <button class="money-btn">거스름돈 반환</button>
+                    <input class="money-input" id="moneyInput" placeholder="입금액 입력" type="number"><button
+                        class="money-btn" id="moneyButton">입금</button>
                     <div class="shopping-bag">
                         <ul class="shopping-list" id="shoppingList">
                             <!-- <li class="shopping-item">
@@ -101,7 +106,7 @@
                 <div class="money-have-back">
                     <div class="money-have">
                         <p class="money-tit">소지금 :</p>
-                        <p class="money-num">25,000,000000원</p>
+                        <p class="money-num" id="moneyNum">25,000원</p>
                     </div>
                 </div>
 
@@ -110,12 +115,12 @@
                     <div class="buy-bag">
                         <ul class="buy-list">
                             <li class="buy-item">
-                                <img src="img/콜라.svg" alt="오리지널콜라">
+                                <img src="img/originalCola.svg" alt="오리지널콜라">
                                 <div class="shopping-item-name buy-name">Original_Cola</div>
                                 <div class="shopping-num buy-num">1</div>
                             </li>
                             <li class="buy-item">
-                                <img src="img/green_cola.svg" alt="오리지널콜라">
+                                <img src="img/greenCola.svg" alt="오리지널콜라">
                                 <div class="shopping-item-name buy-name">Green_Cola</div>
                                 <div class="shopping-num buy-num">2</div>
                             </li>
