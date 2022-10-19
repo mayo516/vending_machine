@@ -1,86 +1,88 @@
 <!DOCTYPE html>
 <html lang="ko">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="reset.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="reset.css" />
     <title>콜라콜라 자판기</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;700&display=swap" rel="stylesheet">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
+  <body>
     <div class="container">
-        <header class="logo">
-            <h1><img src="img/logo.png" alt="콜라콜라"></h1>
-        </header>
-        <main class="main">
-            <section class="buy-before">
-                <!-- <h2>구매 페이지</h2> -->
-                <ul class="item-list">
-                    <li>
-                        <button class="product-wrapper" id="originalCola">
-                            <img src="img/originalCola.svg" alt="">
-                            <span class="pro-name">Original_Cola</span>
-                            <span class="price">1000원</span>
-                        </button>
-                    </li>
-                    <li>
-                        <button class="product-wrapper" id="violetCola">
-                            <img src="img/violetCola.svg" alt="">
-                            <span class="pro-name">Violet_Cola</span>
-                            <span class="price">1000원</span>
+      <header class="logo">
+        <h1><img src="img/logo.png" alt="콜라콜라" /></h1>
+      </header>
+      <main class="main">
+        <section class="buy-before">
+          <!-- <h2>구매 페이지</h2> -->
+          <ul class="item-list">
+            <li>
+              <button class="product-wrapper" id="originalCola">
+                <img src="img/originalCola.svg" alt="" />
+                <span class="pro-name">Original_Cola</span>
+                <span class="price">1000원</span>
+              </button>
+            </li>
+            <li>
+              <button class="product-wrapper" id="violetCola">
+                <img src="img/violetCola.svg" alt="" />
+                <span class="pro-name">Violet_Cola</span>
+                <span class="price">1000원</span>
+              </button>
+            </li>
+            <li>
+              <button class="product-wrapper" id="yellowCola">
+                <img src="img/yellowCola.svg" alt="" />
+                <span class="pro-name">Yellow_Cola</span>
+                <span class="price">1000원</span>
+              </button>
+            </li>
+            <li>
+              <button class="product-wrapper" id="coolCola">
+                <img src="img/coolCola.svg" alt="" />
+                <span class="pro-name">Cool_Cola</span>
+                <span class="price">1000원</span>
+              </button>
+            </li>
+            <li>
+              <button class="product-wrapper" id="greenCola">
+                <img src="img/greenCola.svg" alt="" />
+                <span class="pro-name">Green_Cola</span>
+                <span class="price">1000원</span>
+              </button>
+            </li>
+            <li>
+              <button class="product-wrapper" id="orangeCola">
+                <img src="img/orangeCola.svg" alt="" />
+                <span class="pro-name">Orange_Cola</span>
+                <span class="price">1000원</span>
+              </button>
+            </li>
+          </ul>
+          <div class="purchasing-process">
+            <div class="balance">
+              잔액:
+              <div class="balanceMoney" id="balanceMoney">1000000원</div>
+            </div>
 
-                        </button>
-                    </li>
-                    <li>
-                        <button class="product-wrapper" id="yellowCola">
-                            <img src="img/yellowCola.svg" alt="">
-                            <span class="pro-name">Yellow_Cola</span>
-                            <span class="price">1000원</span>
-
-                        </button>
-                    </li>
-                    <li>
-                        <button class="product-wrapper" id="coolCola">
-                            <img src="img/coolCola.svg" alt="">
-                            <span class="pro-name">Cool_Cola</span>
-                            <span class="price">1000원</span>
-
-                        </button>
-                    </li>
-                    <li>
-                        <button class="product-wrapper" id="greenCola">
-                            <img src="img/greenCola.svg" alt="">
-                            <span class="pro-name">Green_Cola</span>
-                            <span class="price">1000원</span>
-
-                        </button>
-                    </li>
-                    <li>
-                        <button class="product-wrapper" id="orangeCola">
-                            <img src="img/orangeCola.svg" alt="">
-                            <span class="pro-name">Orange_Cola</span>
-                            <span class="price">1000원</span>
-
-                        </button>
-                    </li>
-                </ul>
-                <div class="purchasing-process">
-                    <div class="balance">잔액:
-                        <div class="balanceMoney" id="balanceMoney">1000000원</div>
-                    </div>
-
-                    <button class="money-btn">거스름돈 반환</button>
-                    <input class="money-input" id="moneyInput" placeholder="입금액 입력" type="number"><button
-                        class="money-btn" id="moneyButton">입금</button>
-                    <div class="shopping-bag">
-                        <ul class="shopping-list" id="shoppingList">
-                            <!-- <li class="shopping-item">
+            <button class="money-btn">거스름돈 반환</button>
+            <input
+              class="money-input"
+              id="moneyInput"
+              placeholder="입금액 입력"
+              type="number"
+            /><button class="money-btn" id="moneyButton">입금</button>
+            <div class="shopping-bag">
+              <ul class="shopping-list" id="shoppingList">
+                <!-- <li class="shopping-item">
                                 <img src="img/콜라.svg" alt="오리지널콜라">
                                 <div class="shopping-item-name">Original_Cola</div>
                                 <div class="shopping-num">1</div>
@@ -95,45 +97,40 @@
                                 <div class="shopping-item-name">Green_Cola</div>
                                 <div class="shopping-num">1</div>
                             </li> -->
+              </ul>
+            </div>
+            <button class="purchasing-btn">획득</button>
+          </div>
+        </section>
+        <section class="buy-after">
+          <div class="money-have-back">
+            <div class="money-have">
+              <p class="money-tit">소지금 :</p>
+              <p class="money-num" id="moneyNum">25,000원</p>
+            </div>
+          </div>
 
-                        </ul>
-
-                    </div>
-                    <button class="purchasing-btn">획득</button>
-                </div>
-            </section>
-            <section class="buy-after">
-                <div class="money-have-back">
-                    <div class="money-have">
-                        <p class="money-tit">소지금 :</p>
-                        <p class="money-num" id="moneyNum">25,000원</p>
-                    </div>
-                </div>
-
-                <div class="taken-item">
-                    <p class="buy-ber">획득한 음료</p>
-                    <div class="buy-bag">
-                        <ul class="buy-list">
-                            <li class="buy-item">
-                                <img src="img/originalCola.svg" alt="오리지널콜라">
-                                <div class="shopping-item-name buy-name">Original_Cola</div>
-                                <div class="shopping-num buy-num">1</div>
-                            </li>
-                            <li class="buy-item">
-                                <img src="img/greenCola.svg" alt="오리지널콜라">
-                                <div class="shopping-item-name buy-name">Green_Cola</div>
-                                <div class="shopping-num buy-num">2</div>
-                            </li>
-
-                        </ul>
-
-                    </div>
-                    <p class="sum">총금액:9,000원</p>
-                </div>
-            </section>
-        </main>
+          <div class="taken-item">
+            <p class="buy-ber">획득한 음료</p>
+            <div class="buy-bag">
+              <ul class="buy-list">
+                <li class="buy-item">
+                  <img src="img/originalCola.svg" alt="오리지널콜라" />
+                  <div class="shopping-item-name buy-name">Original_Cola</div>
+                  <div class="shopping-num buy-num">1</div>
+                </li>
+                <li class="buy-item">
+                  <img src="img/greenCola.svg" alt="오리지널콜라" />
+                  <div class="shopping-item-name buy-name">Green_Cola</div>
+                  <div class="shopping-num buy-num">2</div>
+                </li>
+              </ul>
+            </div>
+            <p class="sum">총금액:9,000원</p>
+          </div>
+        </section>
+      </main>
     </div>
     <script src="js/app.js"></script>
-</body>
-
+  </body>
 </html>

@@ -38,7 +38,7 @@ productList.forEach((name) => {
 
 
 
-// 입금 버튼 누르면 일어나는 일  
+// 기능2 : 입금 버튼 누르면 일어나는 일  
 const moneyInput = document.querySelector('#moneyInput');
 const moneyButton = document.querySelector('#moneyButton');
 const balanceMoney = document.querySelector('#balanceMoney');
@@ -74,9 +74,15 @@ moneyButton.addEventListener('click', function () {
 })
 
 
+// 3. 거스름돈 반환 버튼 누르면 일어나는 일 
+const changeButton = document.querySelector('.money-btn');
 
+changeButton.addEventListener('click', moneyChange);
 
-
+function moneyChange() {
+    moneyNum.innerText = `${parseInt(moneyNum.innerText.slice(0, 6).replace(/,/g, '')) + parseInt(balanceMoney.innerText)}원`
+    balanceMoney.innerText = `${0}원`
+}
 
 
 
