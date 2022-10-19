@@ -6,7 +6,6 @@ const yellowCola = document.querySelector('#yellowCola');
 const coolCola = document.querySelector('#coolCola');
 const greenCola = document.querySelector('#greenCola');
 const orangeCola = document.querySelector('#orangeCola');
-
 const productList = [originalCola, violetCola, yellowCola, coolCola, greenCola, orangeCola];
 
 
@@ -43,35 +42,41 @@ const moneyInput = document.querySelector('#moneyInput');
 const moneyButton = document.querySelector('#moneyButton');
 const balanceMoney = document.querySelector('#balanceMoney');
 const moneyNum = document.querySelector('#moneyNum');
-console.log(parseInt(moneyNum.innerText.slice(0, 6)));
+let money = 1000000;
+let havingMoney = 25000;
+balanceMoney.innerText = `${money.toLocaleString('ko-KR')}원`;
+moneyNum.innerText = `${havingMoney.toLocaleString('ko-KR')}원`;
 
+moneyButton.addEventListener('click', depositMoney);
 
-moneyButton.addEventListener('click', function () {
-    // 입금액이 없는 경우 (alert나 0을 더하는 것)
-    if (moneyInput.value === '') {
-        alert('입금액을 임력하세요')
+function depositMoney(){
+        // 입금액이 없는 경우 (alert나 0을 더하는 것)
+        if (moneyInput.value === '') {
+            alert('입금액을 임력하세요')
+        }
+        //입금액이 소지금보다 큰 경우 ( alert )
+        else if ((havingMoney - parseInt(moneyInput.value)) < 0) {
+            alert('잔액이 부족합니다')
+            moneyInput.value = '입금액 입력';
+        }
+        else {  
+            // 1. 잔액에 입금액 만큼이 추가 되어야 한다. 
+            money = money + parseInt(moneyInput.value);
+            console.log(money);
+            balanceMoney.innerText = `${money.toLocaleString('ko-KR')}원`
+              
+        
+            // 2. 소지금에서 입금액 만큼이 빠져야 한다. 
+            // 소지금 - moneyInput.value
+            havingMoney = havingMoney - parseInt(moneyInput.value);
+            moneyNum.innerText = `${havingMoney.toLocaleString('ko-KR')}원`;
+             
+    
+            // 3. 입금액이 초기화 되어야한다. 
+            moneyInput.value = '입금액 입력';
+        }
     }
-    //입금액이 소지금보다 큰 경우 ( alert )
-    else if (parseInt(moneyNum.innerText.slice(0, 6).replace(/,/g, '')) - parseInt(moneyInput.value) < 0) {
-        alert('잔액이 부족합니다')
-        moneyInput.value = '입금액 입력';
-    }
-    else { // 1. 잔액에 입금액 만큼이 추가 되어야 한다. 
-        let change = balanceMoney.innerText;
 
-        change = parseInt(change) + parseInt(moneyInput.value);
-        balanceMoney.innerText = `${change}원`
-        // console.log(parseInt(balanceMoney));
-
-        // 2. 소지금에서 입금액 만큼이 빠져야 한다. 
-        // 소지금 - moneyInput.value
-        moneyNum.innerText = `${parseInt(moneyNum.innerText.slice(0, 6).replace(/,/g, '')) - parseInt(moneyInput.value)}원`;
-
-
-        // 3. 입금액이 초기화 되어야한다. 
-        moneyInput.value = '입금액 입력';
-    }
-})
 
 
 // 3. 거스름돈 반환 버튼 누르면 일어나는 일 
@@ -80,10 +85,11 @@ const changeButton = document.querySelector('.money-btn');
 changeButton.addEventListener('click', moneyChange);
 
 function moneyChange() {
-    moneyNum.innerText = `${parseInt(moneyNum.innerText.slice(0, 6).replace(/,/g, '')) + parseInt(balanceMoney.innerText)}원`
+    havingMoney = havingMoney + money;
+    money = 0 ; 
+    moneyNum.innerText = `${havingMoney.toLocaleString('ko-KR')}원`;    
     balanceMoney.innerText = `${0}원`
 }
 
-
-
+// balanceMoney.innerText= `${parseInt(balanceMoney.innerText.slice(0 ,-1)).toLocaleString('ko-KR')}원`;
 
