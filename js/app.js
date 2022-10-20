@@ -23,7 +23,7 @@ productList.forEach((name) => {
 
             newItem.id = `${name.id}2`;
             newItem.innerHTML = `<img src="img/${name.id}.svg" alt="오리지널콜라">
-            <div div class="shopping-item-name" > ${name.id}</div >
+            <div class="shopping-item-name" > ${name.id}</div >
             <input class="shopping-num" value="1">`
 
         } else if (name.classList.contains('product-wrapper-click') === false) {
@@ -92,4 +92,32 @@ function moneyChange() {
 }
 
 // balanceMoney.innerText= `${parseInt(balanceMoney.innerText.slice(0 ,-1)).toLocaleString('ko-KR')}원`;
+
+//획득 버튼을 누르면 일어나는 일 
+//1. 장바구니의 개수만큼 획득한 목록에 생긴다 
+const purchasingBtn = document.querySelector(".purchasing-btn");
+const shoppingItem = document.getElementsByClassName("shopping-item");
+const buyList = document.querySelector(".buy-list");
+const shoppingNum = document.getElementsByClassName("shopping-num");
+purchasingBtn.addEventListener("click" , purchasingProcess)
+function  purchasingProcess(){
+    const shoppingNumList =  Array.from(shoppingNum);
+    let sum = 0; 
+    for( let num of shoppingNumList) {
+        sum = sum + parseInt(num.value);
+    }
+    
+    if(sum*1000 > money) {
+        alert("잔액이 부족합니다.")
+        return
+    } else {
+        money = money-(sum*1000);
+        console.log(money);
+        balanceMoney.innerText = `${money.toLocaleString('ko-KR')}원`
+    }
+    
+    
+
+}
+
 
