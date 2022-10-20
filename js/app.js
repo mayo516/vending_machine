@@ -24,7 +24,7 @@ productList.forEach((name) => {
             newItem.id = `${name.id}2`;
             newItem.innerHTML = `<img src="img/${name.id}.svg" alt="오리지널콜라">
             <div div class="shopping-item-name" > ${name.id}</div >
-                <div class="shopping-num">1</div>`
+            <input class="shopping-num" value="1">`
 
         } else if (name.classList.contains('product-wrapper-click') === false) {
             removeItem = document.querySelector(`#${name.id}2`);

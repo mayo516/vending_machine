@@ -237,6 +237,9 @@ body {
     border: 1px solid #BDBDBD;
     border-radius: 5px;
     padding: 7px 10px;
+    width:8px; 
+    height:19px;
+
 }
 
 .buy-after {
