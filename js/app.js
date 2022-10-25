@@ -15,15 +15,14 @@ productList.forEach((name) => {
         name.classList.toggle('product-wrapper-click');
         const newItem = document.createElement('li');
         const shoppingList = document.querySelector('#shoppingList');
-
         if (name.classList.contains('product-wrapper-click') === true) {
 
             shoppingList.appendChild(newItem);
             newItem.classList += `shopping-item`;
-
+            newItem.dataset.product = name.dataset.name
             newItem.id = `${name.id}2`;
-            newItem.innerHTML = `<img src="img/${name.id}.svg" alt="오리지널콜라">
-            <div class="shopping-item-name" > ${name.id}</div >
+            newItem.innerHTML = `<img src="img/${name.dataset.name}.svg" alt="오리지널콜라">
+            <div class="shopping-item-name" > ${name.dataset.name}</div >
             <input class="shopping-num" value="1">`
 
         } else if (name.classList.contains('product-wrapper-click') === false) {
@@ -102,36 +101,37 @@ const shoppingNum = document.getElementsByClassName("shopping-num");
 const shoppingList = document.querySelector("#shoppingList");
 purchasingBtn.addEventListener("click" , purchasingProcess)
 function  purchasingProcess(){
-    const shoppingNumList =  Array.from(shoppingNum);
-    
+    const shoppingItemArray = Array.from(shoppingItem);
+
+    console.log(shoppingItemArray[0].dataset.product);
    
     let sum = 0; 
-    for( let num of shoppingNumList) {
-        sum = sum + parseInt(num.value);
+    // for( let num of shoppingNumList) {
+    //     sum = parseInt(num.value);
+    //     console.log(sum);
 
-
-    }
+    // }
     
     if(sum*1000 > money) {
         alert("잔액이 부족합니다.")
-       return
-    } else {
+      
+    }
         money = money-(sum*1000);
         // console.log(money);
         balanceMoney.innerText = `${money.toLocaleString('ko-KR')}원`;
         // 2. 획득한 음료 목록에 생긴다. 
-        for (let i =0; i <shoppingList.childElementCount ; i++) {
+     for (let i =0; i <shoppingList.childElementCount ; i++) {
+            
             const buyItem = document.createElement("li");
             buyList.appendChild(buyItem);
             buyItem.classList += "buy-item";
-            buyItem.innerHTML = shoppingItem[i].innerHTML;
-            buyItem.childNodes[2].classList.add("buy-name");
-            buyItem.childNodes[4].classList.add("buy-num") 
-            console.log(buyItem);
-            buyItem.childNodes[4].readOnly = true;
-            
+            buyItem.innerHTML = `<img src="img/${shoppingItemArray[i].dataset.product}.svg" alt="오리지널콜라" />
+                  <div class="shopping-item-name buy-name">${shoppingItemArray[i].dataset.product}</div>
+                  <div class="shopping-num buy-num readonly">${shoppingItemArray[i].childNodes[4].value}</div>`;
+
+
         }
-    }
+     
     
     //3. 획득한 음료 숫자가 카운팅되게 
 
