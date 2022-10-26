@@ -100,6 +100,17 @@ const buyList = document.querySelector(".buy-list");
 const shoppingNum = document.getElementsByClassName("shopping-num");
 const shoppingList = document.querySelector("#shoppingList");
 purchasingBtn.addEventListener("click" , purchasingProcess)
+
+const flavor = {
+    Original_Cola : 0,
+    Violet_Cola: 0,
+    Yellow_Cola: 0, 
+    Cool_Cola: 0,
+    Green_Cola: 0, 
+    Orange_Cola: 0
+
+}
+
 function  purchasingProcess(){
     const shoppingItemArray = Array.from(shoppingItem);
 
@@ -120,7 +131,7 @@ function  purchasingProcess(){
         // console.log(money);
         balanceMoney.innerText = `${money.toLocaleString('ko-KR')}원`;
         // 2. 획득한 음료 목록에 생긴다. 
-     for (let i =0; i <shoppingList.childElementCount ; i++) {
+     for (let i = 0; i <shoppingList.childElementCount ; i++) {
             
             const buyItem = document.createElement("li");
             buyList.appendChild(buyItem);
@@ -129,12 +140,15 @@ function  purchasingProcess(){
                   <div class="shopping-item-name buy-name">${shoppingItemArray[i].dataset.product}</div>
                   <div class="shopping-num buy-num readonly">${shoppingItemArray[i].childNodes[4].value}</div>`;
 
-
         }
      
     
     //3. 획득한 음료 숫자가 카운팅되게 
-
+   
+    for (let i = 0 ;i <shoppingItemArray.length ; i++ ) {
+        flavor[shoppingItemArray[i].dataset.product] = flavor[shoppingItemArray[i].dataset.product] + parseInt(shoppingItemArray[i].childNodes[4].value); 
+    }
+   console.log(flavor);
 }
 
 
