@@ -13,7 +13,7 @@
  # :open_file_folder:프로젝트 자세히 보기  
    
    
-   **데모링크** [Demo ]([https://mayo516.github.io/vending_machine/](https://mayo516.github.io/vending_machine/))
+   **데모링크** [Demo ](https://mayo516.github.io/vending_machine/)
    
  
    
